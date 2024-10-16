@@ -1,0 +1,18 @@
+<div class="product-list-container">
+  <h1>List of Products</h1>
+  <button routerLink="/add">Add</button>
+  
+  <div class="product-grid">
+    @for (product of products(); track product.id) {
+      <app-product
+        [title]="product.title"
+        [price]="product.price"
+        [description]="product.description"
+        [id]="product.id" 
+        [category]="product.category.name"
+        [imageUrl]="product.images[0]"
+        (productDelete)="onProductDelete($event)"
+      ></app-product>
+    }
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<div>
+  <form class="form-container" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input
+        id="title"
+        type="text"
+        name="title"
+        placeholder="Enter product title"
+        formControlName="title"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input
+        id="price"
+        type="number"
+        name="price"
+        placeholder="Enter product price"
+        formControlName="price"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea
+        id="description"
+        name="description"
+        rows="3"
+        placeholder="Enter product description"
+        formControlName="description"
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="categoryId">Category ID</label>
+      <input
+        id="categoryId"
+        type="number"
+        name="categoryId"
+        placeholder="Enter category ID"
+        formControlName="categoryId"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="imageUrl">Image URL</label>
+      <input
+        id="imageUrl"
+        type="text"
+        name="imageUrl"
+        placeholder="Enter image URL"
+        formControlName="imageUrl"
+      />
+    </div>
+
+    <hr />
+
+    <div class="form-actions">
+      <button type="submit" class="btn-submit">Submit</button>
+    </div>
+  </form>
+</div>

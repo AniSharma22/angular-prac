@@ -1,0 +1,15 @@
+  <div class="product-container">
+    <div class="product-info">
+      <h2 class="product-title">{{ title() }}</h2>
+      <p class="product-price">{{ '$' + price() }}</p>
+      <p class="product-description">{{ description() }}</p>
+      <p class="product-category">Category: {{ category() }}</p>
+      <img [src]="imageUrl()" alt="Product Image" class="product-image" />
+    </div>
+  
+    <div class="product-actions">
+      <button class="btn delete-btn" (click)="onProductDelete()">Delete</button>
+      <button class="btn update-btn" routerLink="/update">Update</button>
+    </div>
+  </div>
+  
